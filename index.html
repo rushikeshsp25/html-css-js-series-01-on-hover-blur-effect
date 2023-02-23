@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Hover Blur Effect</title>
+    <style>
+        body {
+            background: #252330;
+            font-family: "Montserrat";
+            font-weight: bold;
+            color: #A82C2C;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10%;
+        }
+
+        .card {
+            padding: 30px;
+            margin: 2%;
+            background: #DBBDBD;
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 2pX 3px 0px rgba(0, 0, 0, 0, 25);
+            border-radius: 3pX;
+            transition: .2s all;
+            cursor: pointer;
+        }
+
+        .container:hover .card {
+            filter: blur (3px);
+            opacity: .5;
+            transform: scale(.98);
+            box-shadow: none;
+        }
+
+        .container:hover .card:hover {
+            transform: scale(1);
+            filter: blur(0px);
+            opacity: 1;
+            box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+            background: #A82C2C;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <p>Hover me</p>
+        </div>
+        <div class="card">
+            <p>Hover me</p>
+        </div>
+        <div class="card">
+            <p>Hover me</p>
+        </div>
+    </div>
+</body>
+
+</html>
